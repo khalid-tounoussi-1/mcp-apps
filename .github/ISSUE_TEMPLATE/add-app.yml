@@ -1,0 +1,83 @@
+name: Suggest an MCP App
+description: Suggest a server that ships an interactive UI, without writing JSON yourself
+title: "Add: "
+labels: ["candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this if you would rather not open a pull request. A maintainer will
+        turn it into an entry.
+
+        Out of scope: SDKs, frameworks, hosts and clients that render apps,
+        tutorial repositories, and forks.
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repository URL
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: App name
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What can a user do with it
+      description: One sentence. Name the interaction, not the benefit.
+      placeholder: Interactive flight search with a date picker and price sliders.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - data-visualization
+        - dashboards
+        - 3d-graphics
+        - maps-geo
+        - forms-workflows
+        - media
+        - developer-tools
+        - productivity
+        - finance
+        - science
+        - games
+        - other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: verification
+    attributes:
+      label: How do you know it is an MCP App
+      options:
+        - I ran it and saw the UI render
+        - I read the source and saw the ui:// resource declaration
+        - The README says so, I have not checked
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: >
+        Optional but very welcome. The tool _meta block, the resource declaration,
+        or a link to the lines in the source.
+      render: json
+
+  - type: input
+    id: media
+    attributes:
+      label: Screenshot, GIF, or demo video
+      description: Optional. This list is about visual apps, so media helps a lot.
