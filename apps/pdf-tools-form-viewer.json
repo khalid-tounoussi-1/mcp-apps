@@ -1,0 +1,24 @@
+{
+  "id": "pdf-tools-form-viewer",
+  "name": "PDF Form Viewer",
+  "description": "Open a PDF and fill its form fields inline.",
+  "category": "media",
+  "features": [
+    "interactive-form",
+    "file-upload"
+  ],
+  "ui_resource": "ui://pdf-toolkit/viewer",
+  "server": {
+    "name": "PDF-Tools",
+    "repo_url": "https://github.com/Open-Document-Alliance/PDF-Tools"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "server/index.js",
+      "tool_path": "server/index.js"
+    }
+  },
+  "added": "2026-08-11"
+}

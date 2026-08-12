@@ -1,0 +1,23 @@
+{
+  "id": "quran-mushaf-reader",
+  "name": "Quran Mushaf Reader",
+  "description": "Read the Mushaf with page navigation rendered inline.",
+  "category": "media",
+  "features": [
+    "multi-step"
+  ],
+  "ui_resource": "ui://mushaf.html",
+  "server": {
+    "name": "quran-mcp",
+    "repo_url": "https://github.com/quran/quran-mcp"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "src/quran_mcp/mcp/resources/app/mushaf.py",
+      "tool_path": "src/quran_mcp/mcp/tools/mushaf/show.py"
+    }
+  },
+  "added": "2026-08-11"
+}

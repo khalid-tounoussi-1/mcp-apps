@@ -1,0 +1,24 @@
+{
+  "id": "lightdash-chart-renderer",
+  "name": "Lightdash Chart Renderer",
+  "description": "Render a Lightdash chart inline and explore the underlying data.",
+  "category": "data-visualization",
+  "features": [
+    "chart",
+    "table"
+  ],
+  "ui_resource": "ui://render-chart/chart.html",
+  "server": {
+    "name": "lightdash",
+    "repo_url": "https://github.com/lightdash/lightdash"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "packages/backend/src/ee/services/McpService/mcpAppHelpers.ts",
+      "tool_path": "packages/backend/src/ee/services/McpService/McpService.ts"
+    }
+  },
+  "added": "2026-08-11"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "blog2video-setup-gallery",
+  "name": "Blog2Video Setup Gallery",
+  "description": "Pick visual styles for a generated video from a gallery of options.",
+  "category": "media",
+  "features": [
+    "drag-drop",
+    "video",
+    "also-openai-widget"
+  ],
+  "ui_resource": "ui://blog2video/setup_gallery_v2",
+  "server": {
+    "name": "blog2video",
+    "repo_url": "https://github.com/FireBird-Technologies/blog2video"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "backend/app/routers/mcp_transport.py",
+      "tool_path": "backend/mcp_server/tools.py"
+    }
+  },
+  "added": "2026-08-11"
+}

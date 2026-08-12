@@ -1,0 +1,24 @@
+{
+  "id": "gnubok-receipt-matcher",
+  "name": "Receipt Matcher",
+  "description": "Match receipts to transactions by dragging them onto the right entry.",
+  "category": "finance",
+  "features": [
+    "drag-drop",
+    "table"
+  ],
+  "ui_resource": "ui://receipt-matcher/app.html",
+  "server": {
+    "name": "gnubok",
+    "repo_url": "https://github.com/erp-mafia/gnubok"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "extensions/general/mcp-server/widgets/types.ts",
+      "tool_path": "extensions/general/mcp-server/server.ts"
+    }
+  },
+  "added": "2026-08-11"
+}

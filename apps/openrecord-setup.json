@@ -1,0 +1,24 @@
+{
+  "id": "openrecord-setup",
+  "name": "OpenRecord Setup",
+  "description": "Connect OpenRecord to your account through a setup form in the chat.",
+  "category": "forms-workflows",
+  "features": [
+    "interactive-form",
+    "also-openai-widget"
+  ],
+  "ui_resource": "ui://openrecord/setup",
+  "server": {
+    "name": "openrecord",
+    "repo_url": "https://github.com/Fan-Pier-Labs/openrecord"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "claude-desktop-extension/src/ui.ts",
+      "tool_path": "claude-desktop-extension/src/tools.ts"
+    }
+  },
+  "added": "2026-08-11"
+}

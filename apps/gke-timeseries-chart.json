@@ -1,0 +1,23 @@
+{
+  "id": "gke-timeseries-chart",
+  "name": "GKE Time-Series Chart",
+  "description": "Plot GKE monitoring metrics as an interactive time-series chart.",
+  "category": "data-visualization",
+  "features": [
+    "chart"
+  ],
+  "ui_resource": "ui://monitoring_time_series_chart/index.html",
+  "server": {
+    "name": "gke-mcp",
+    "repo_url": "https://github.com/GoogleCloudPlatform/gke-mcp"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "pkg/apps/charts/charts.go",
+      "tool_path": "pkg/apps/charts/charts.go"
+    }
+  },
+  "added": "2026-08-11"
+}

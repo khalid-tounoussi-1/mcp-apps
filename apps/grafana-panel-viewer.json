@@ -1,0 +1,24 @@
+{
+  "id": "grafana-panel-viewer",
+  "name": "Grafana Panel Viewer",
+  "description": "View a Grafana panel inline and change its time range without leaving the chat.",
+  "category": "dashboards",
+  "features": [
+    "chart",
+    "realtime"
+  ],
+  "ui_resource": "ui://mcp-grafana/panel-viewer.html",
+  "server": {
+    "name": "mcp-grafana",
+    "repo_url": "https://github.com/grafana/mcp-grafana"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "ui_apps.go",
+      "tool_path": "ui_apps.go"
+    }
+  },
+  "added": "2026-08-11"
+}

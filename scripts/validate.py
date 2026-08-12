@@ -71,7 +71,7 @@ def main() -> int:
 
     p = Problems()
     seen_ids: dict[str, str] = {}
-    seen_repos: dict[str, str] = {}
+    seen_apps: dict[tuple[str, str], str] = {}
     today = dt.date.today()
 
     for path in files:
@@ -100,12 +100,16 @@ def main() -> int:
                 p.add(rel, f'duplicate id "{entry_id}", also in {seen_ids[entry_id]}')
             seen_ids[entry_id] = rel
 
-        repo = entry.get("repo_url")
-        if isinstance(repo, str):
-            key = repo.rstrip("/").lower()
-            if key in seen_repos:
-                p.add(rel, f"duplicate repo_url, also in {seen_repos[key]}")
-            seen_repos[key] = rel
+        # One server may ship several apps, so repo_url alone is not unique.
+        # What must be unique is the app: this ui:// resource in this repo.
+        repo = (entry.get("server") or {}).get("repo_url")
+        ui_res = entry.get("ui_resource")
+        if isinstance(repo, str) and isinstance(ui_res, str):
+            key = (repo.rstrip("/").lower(), ui_res)
+            if key in seen_apps:
+                p.add(rel, f"duplicate app, {ui_res} in this repo is already "
+                           f"listed by {seen_apps[key]}")
+            seen_apps[key] = rel
 
         for field, value in (("added", entry.get("added")),
                             ("updated", entry.get("updated")),

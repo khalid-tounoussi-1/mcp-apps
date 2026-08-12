@@ -1,0 +1,22 @@
+{
+  "id": "datafactory-connection-form",
+  "name": "Data Factory Connection Form",
+  "description": "Create an Azure Data Factory connection through a form with validation.",
+  "category": "forms-workflows",
+  "features": [
+    "interactive-form"
+  ],
+  "ui_resource": "ui://datafactory/create-connection",
+  "server": {
+    "name": "DataFactory.MCP",
+    "repo_url": "https://github.com/microsoft/DataFactory.MCP"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "DataFactory.MCP.Core/Infrastructure/McpApps/McpAppsConstants.cs"
+    }
+  },
+  "added": "2026-08-11"
+}

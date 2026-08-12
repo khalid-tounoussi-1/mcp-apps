@@ -74,14 +74,24 @@ def render_table(entries: list[dict]) -> str:
         if not rows:
             continue
         out.append(f"### {CATEGORY_TITLES[cat]}\n")
-        out.append("| App | What it does | Checked | Media |")
-        out.append("| --- | --- | :---: | --- |")
+        out.append("| App | What it does | Server | Checked | Media |")
+        out.append("| --- | --- | --- | :---: | --- |")
         for e in rows:
             v = e.get("verification", {})
             badge = STATUS_BADGE.get(v.get("status", "claimed"), "📋")
             checked = f'{badge}<br><sub>{v.get("last_checked", "")}</sub>'
-            name = f'[{e["name"]}]({e["repo_url"]})'
-            out.append(f'| {name} | {e["description"]} | {checked} | {render_media_links(e)} |')
+
+            srv = e.get("server", {})
+            repo = srv.get("repo_url", "")
+            srv_name = srv.get("name") or repo.rstrip("/").rsplit("/", 1)[-1]
+
+            name = f'**{e["name"]}**'
+            if e.get("availability"):
+                # Say up front when the UI does not render out of the box.
+                name += f'<br><sub>⚑ {e["availability"]}</sub>'
+
+            out.append(f'| {name} | {e["description"]} | [{srv_name}]({repo}) '
+                       f'| {checked} | {render_media_links(e)} |')
         out.append("")
     return "\n".join(out)
 
@@ -98,6 +108,11 @@ def render_counts(entries: list[dict]) -> str:
     return ", ".join(parts)
 
 
+def render_server_count(entries: list[dict]) -> str:
+    n = len({e.get("server", {}).get("repo_url", "") for e in entries if e.get("server")})
+    return f"{n} server{'' if n == 1 else 's'}"
+
+
 def build() -> tuple[str, str]:
     entries = load_entries()
     apps_json = json.dumps(entries, indent=2, ensure_ascii=False) + "\n"
@@ -107,6 +122,7 @@ def build() -> tuple[str, str]:
     readme = (TEMPLATE.read_text()
               .replace("{{APPS_TABLE}}", render_table(entries))
               .replace("{{COUNT}}", str(len(entries)))
+              .replace("{{SERVER_COUNT}}", render_server_count(entries))
               .replace("{{VERIFICATION_COUNTS}}", render_counts(entries)))
     return apps_json, readme
 

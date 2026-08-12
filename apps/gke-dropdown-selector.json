@@ -1,0 +1,23 @@
+{
+  "id": "gke-dropdown-selector",
+  "name": "GKE Dropdown Selector",
+  "description": "Choose a GKE cluster or resource from a dropdown instead of typing its name.",
+  "category": "forms-workflows",
+  "features": [
+    "interactive-form"
+  ],
+  "ui_resource": "ui://dropdown/index.html",
+  "server": {
+    "name": "gke-mcp",
+    "repo_url": "https://github.com/GoogleCloudPlatform/gke-mcp"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "pkg/apps/dropdown/dropdown.go",
+      "tool_path": "pkg/apps/dropdown/dropdown.go"
+    }
+  },
+  "added": "2026-08-11"
+}

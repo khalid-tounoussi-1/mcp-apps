@@ -6,14 +6,18 @@ Only servers implementing the
 [MCP Apps extension](https://modelcontextprotocol.io/extensions/apps/overview)
 (SEP-1865). Every entry records how it was checked, and when.
 
-**{{COUNT}} apps.** {{VERIFICATION_COUNTS}}
+**{{COUNT}} apps** across {{SERVER_COUNT}}. {{VERIFICATION_COUNTS}}
 
 ## What qualifies
 
-A server belongs here when both are true:
+One entry is one **app**, not one server. A server shipping three UI resources
+appears as three entries, because you are looking for a chart or a form, not for a
+repository.
 
-1. It declares a resource with a `ui://` URI and mimeType `text/html;profile=mcp-app`
-2. At least one tool carries `_meta.ui.resourceUri` pointing at it
+An app qualifies when both are true:
+
+1. Its server declares a resource with a `ui://` URI and mimeType `text/html;profile=mcp-app`
+2. A tool carries `_meta.ui.resourceUri` pointing at that resource
 
 | | |
 | --- | --- |
@@ -36,7 +40,8 @@ OpenAI's widget protocol both use the same scheme.
 | 🔍 | `source-inspected` | A human read the source and confirmed the declaration |
 | 📋 | `claimed` | The author says so, nobody has checked |
 
-A status is never upgraded without re-running the check.
+A status is never upgraded without re-running the check. A ⚑ marks an app that needs
+something enabled before its UI renders, such as a feature flag.
 
 {{APPS_TABLE}}
 

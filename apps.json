@@ -1,1 +1,533 @@
-[]
+[
+  {
+    "id": "grafana-panel-viewer",
+    "name": "Grafana Panel Viewer",
+    "description": "View a Grafana panel inline and change its time range without leaving the chat.",
+    "category": "dashboards",
+    "features": [
+      "chart",
+      "realtime"
+    ],
+    "ui_resource": "ui://mcp-grafana/panel-viewer.html",
+    "server": {
+      "name": "mcp-grafana",
+      "repo_url": "https://github.com/grafana/mcp-grafana"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "ui_apps.go",
+        "tool_path": "ui_apps.go"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "bagofwords-visualization",
+    "name": "Bag of Words Visualization",
+    "description": "View a generated data visualization and adjust how it is drawn.",
+    "category": "data-visualization",
+    "features": [
+      "chart"
+    ],
+    "ui_resource": "ui://bagofwords/visualization",
+    "server": {
+      "name": "bagofwords",
+      "repo_url": "https://github.com/bagofwords1/bagofwords"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "backend/app/routes/mcp.py",
+        "tool_path": "backend/app/ai/tools/mcp/create_data.py"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "gke-timeseries-chart",
+    "name": "GKE Time-Series Chart",
+    "description": "Plot GKE monitoring metrics as an interactive time-series chart.",
+    "category": "data-visualization",
+    "features": [
+      "chart"
+    ],
+    "ui_resource": "ui://monitoring_time_series_chart/index.html",
+    "server": {
+      "name": "gke-mcp",
+      "repo_url": "https://github.com/GoogleCloudPlatform/gke-mcp"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "pkg/apps/charts/charts.go",
+        "tool_path": "pkg/apps/charts/charts.go"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "lightdash-chart-renderer",
+    "name": "Lightdash Chart Renderer",
+    "description": "Render a Lightdash chart inline and explore the underlying data.",
+    "category": "data-visualization",
+    "features": [
+      "chart",
+      "table"
+    ],
+    "ui_resource": "ui://render-chart/chart.html",
+    "server": {
+      "name": "lightdash",
+      "repo_url": "https://github.com/lightdash/lightdash"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "packages/backend/src/ee/services/McpService/mcpAppHelpers.ts",
+        "tool_path": "packages/backend/src/ee/services/McpService/McpService.ts"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "sidemantic-chart-builder",
+    "name": "Sidemantic Chart Builder",
+    "description": "Build a chart over a semantic layer and adjust the dimensions interactively.",
+    "category": "data-visualization",
+    "features": [
+      "chart"
+    ],
+    "ui_resource": "ui://sidemantic/chart",
+    "tool": "create_chart",
+    "server": {
+      "name": "sidemantic",
+      "repo_url": "https://github.com/sidequery/sidemantic"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "sidemantic/mcp_server.py",
+        "tool_path": "sidemantic/mcp_server.py"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "gnubok-receipt-matcher",
+    "name": "Receipt Matcher",
+    "description": "Match receipts to transactions by dragging them onto the right entry.",
+    "category": "finance",
+    "features": [
+      "drag-drop",
+      "table"
+    ],
+    "ui_resource": "ui://receipt-matcher/app.html",
+    "server": {
+      "name": "gnubok",
+      "repo_url": "https://github.com/erp-mafia/gnubok"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "extensions/general/mcp-server/widgets/types.ts",
+        "tool_path": "extensions/general/mcp-server/server.ts"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "datafactory-connection-form",
+    "name": "Data Factory Connection Form",
+    "description": "Create an Azure Data Factory connection through a form with validation.",
+    "category": "forms-workflows",
+    "features": [
+      "interactive-form"
+    ],
+    "ui_resource": "ui://datafactory/create-connection",
+    "server": {
+      "name": "DataFactory.MCP",
+      "repo_url": "https://github.com/microsoft/DataFactory.MCP"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "DataFactory.MCP.Core/Infrastructure/McpApps/McpAppsConstants.cs"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "firebase-deploy-ui",
+    "name": "Firebase Deploy UI",
+    "description": "Pick deploy targets and watch a Firebase deploy run from a panel in the chat.",
+    "category": "forms-workflows",
+    "features": [
+      "interactive-form",
+      "realtime"
+    ],
+    "ui_resource": "ui://core/deploy/mcp-app.html",
+    "server": {
+      "name": "firebase-tools",
+      "repo_url": "https://github.com/firebase/firebase-tools",
+      "install": {
+        "npm": "firebase-tools"
+      }
+    },
+    "availability": "behind experiment flag: mcpapps",
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "src/mcp/resources/deploy_ui.ts",
+        "tool_path": "src/mcp/tools/core/deploy.ts"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "firebase-environment-ui",
+    "name": "Firebase Environment Editor",
+    "description": "Edit Firebase environment variables in a form rather than one CLI call at a time.",
+    "category": "forms-workflows",
+    "features": [
+      "interactive-form"
+    ],
+    "ui_resource": "ui://core/update_environment/mcp-app.html",
+    "server": {
+      "name": "firebase-tools",
+      "repo_url": "https://github.com/firebase/firebase-tools",
+      "install": {
+        "npm": "firebase-tools"
+      }
+    },
+    "availability": "behind experiment flag: mcpapps",
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "src/mcp/resources/update_environment_ui.ts",
+        "tool_path": "src/mcp/tools/core/update_environment.ts"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "firebase-init-ui",
+    "name": "Firebase Init UI",
+    "description": "Set up a Firebase project through a visual form instead of answering CLI prompts.",
+    "category": "forms-workflows",
+    "features": [
+      "interactive-form",
+      "multi-step"
+    ],
+    "ui_resource": "ui://core/init/mcp-app.html",
+    "server": {
+      "name": "firebase-tools",
+      "repo_url": "https://github.com/firebase/firebase-tools",
+      "install": {
+        "npm": "firebase-tools"
+      }
+    },
+    "availability": "behind experiment flag: mcpapps",
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "src/mcp/resources/init_ui.ts",
+        "tool_path": "src/mcp/tools/core/init.ts"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "github-issue-composer",
+    "name": "GitHub Issue Composer",
+    "description": "Compose and edit a GitHub issue in a form before it is created.",
+    "category": "forms-workflows",
+    "features": [
+      "interactive-form",
+      "text-editor"
+    ],
+    "ui_resource": "ui://github-mcp-server/issue-write",
+    "tool": "issue_write",
+    "server": {
+      "name": "github-mcp-server",
+      "repo_url": "https://github.com/github/github-mcp-server"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "pkg/github/ui_capability.go",
+        "tool_path": "pkg/github/issues.go"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "gke-dropdown-selector",
+    "name": "GKE Dropdown Selector",
+    "description": "Choose a GKE cluster or resource from a dropdown instead of typing its name.",
+    "category": "forms-workflows",
+    "features": [
+      "interactive-form"
+    ],
+    "ui_resource": "ui://dropdown/index.html",
+    "server": {
+      "name": "gke-mcp",
+      "repo_url": "https://github.com/GoogleCloudPlatform/gke-mcp"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "pkg/apps/dropdown/dropdown.go",
+        "tool_path": "pkg/apps/dropdown/dropdown.go"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "openrecord-setup",
+    "name": "OpenRecord Setup",
+    "description": "Connect OpenRecord to your account through a setup form in the chat.",
+    "category": "forms-workflows",
+    "features": [
+      "interactive-form",
+      "also-openai-widget"
+    ],
+    "ui_resource": "ui://openrecord/setup",
+    "server": {
+      "name": "openrecord",
+      "repo_url": "https://github.com/Fan-Pier-Labs/openrecord"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "claude-desktop-extension/src/ui.ts",
+        "tool_path": "claude-desktop-extension/src/tools.ts"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "mapbox-map-viewer",
+    "name": "Mapbox Map Viewer",
+    "description": "Pan and zoom a Mapbox map rendered inline, with a fullscreen toggle.",
+    "category": "maps-geo",
+    "features": [
+      "map"
+    ],
+    "ui_resource": "ui://mapbox/map-app/index.html",
+    "server": {
+      "name": "mapbox-mcp-server",
+      "repo_url": "https://github.com/mapbox/mcp-server"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "src/resources/ui-apps/MapAppUIResource.ts",
+        "tool_path": "src/index.ts"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "mapbox-style-preview",
+    "name": "Mapbox Style Preview",
+    "description": "Preview a Mapbox style on a live map while editing it.",
+    "category": "maps-geo",
+    "features": [
+      "map"
+    ],
+    "ui_resource": "ui://mapbox/preview-style/index.html",
+    "server": {
+      "name": "mapbox-mcp-devkit-server",
+      "repo_url": "https://github.com/mapbox/mcp-devkit-server"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "src/index.ts",
+        "tool_path": "src/tools/preview-style-tool/PreviewStyleTool.ts"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "blog2video-setup-gallery",
+    "name": "Blog2Video Setup Gallery",
+    "description": "Pick visual styles for a generated video from a gallery of options.",
+    "category": "media",
+    "features": [
+      "drag-drop",
+      "video",
+      "also-openai-widget"
+    ],
+    "ui_resource": "ui://blog2video/setup_gallery_v2",
+    "server": {
+      "name": "blog2video",
+      "repo_url": "https://github.com/FireBird-Technologies/blog2video"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "backend/app/routers/mcp_transport.py",
+        "tool_path": "backend/mcp_server/tools.py"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "mcp-music-studio-sheet-music",
+    "name": "Sheet Music Viewer",
+    "description": "Render generated music as sheet music and play it back.",
+    "category": "media",
+    "features": [
+      "audio",
+      "canvas"
+    ],
+    "ui_resource": "ui://sheet-music/mcp-app.html",
+    "server": {
+      "name": "mcp-music-studio",
+      "repo_url": "https://github.com/linxule/mcp-music-studio"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "worker/src/index.ts",
+        "tool_path": "server.ts"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "pdf-tools-form-viewer",
+    "name": "PDF Form Viewer",
+    "description": "Open a PDF and fill its form fields inline.",
+    "category": "media",
+    "features": [
+      "interactive-form",
+      "file-upload"
+    ],
+    "ui_resource": "ui://pdf-toolkit/viewer",
+    "server": {
+      "name": "PDF-Tools",
+      "repo_url": "https://github.com/Open-Document-Alliance/PDF-Tools"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "server/index.js",
+        "tool_path": "server/index.js"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "quran-mushaf-reader",
+    "name": "Quran Mushaf Reader",
+    "description": "Read the Mushaf with page navigation rendered inline.",
+    "category": "media",
+    "features": [
+      "multi-step"
+    ],
+    "ui_resource": "ui://mushaf.html",
+    "server": {
+      "name": "quran-mcp",
+      "repo_url": "https://github.com/quran/quran-mcp"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "src/quran_mcp/mcp/resources/app/mushaf.py",
+        "tool_path": "src/quran_mcp/mcp/tools/mushaf/show.py"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "bagofwords-artifact-editor",
+    "name": "Bag of Words Artifact Editor",
+    "description": "Edit a generated analysis artifact in place instead of regenerating it.",
+    "category": "productivity",
+    "features": [
+      "text-editor"
+    ],
+    "ui_resource": "ui://bagofwords/artifact",
+    "server": {
+      "name": "bagofwords",
+      "repo_url": "https://github.com/bagofwords1/bagofwords"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "backend/app/routes/mcp.py",
+        "tool_path": "backend/app/ai/tools/mcp/edit_artifact.py"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "futuresearch-session-view",
+    "name": "FutureSearch Session View",
+    "description": "Follow a FutureSearch forecasting session as it runs.",
+    "category": "science",
+    "features": [
+      "realtime"
+    ],
+    "ui_resource": "ui://futuresearch/session.html",
+    "server": {
+      "name": "futuresearch-mcp",
+      "repo_url": "https://github.com/futuresearch/futuresearch-python"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "futuresearch-mcp/src/futuresearch_mcp/http_config.py",
+        "tool_path": "futuresearch-mcp/src/futuresearch_mcp/tools.py"
+      }
+    },
+    "added": "2026-08-11"
+  },
+  {
+    "id": "nteract-notebook-output",
+    "name": "nteract Notebook Output",
+    "description": "View rich notebook cell output rendered inline in the conversation.",
+    "category": "science",
+    "features": [
+      "chart",
+      "table"
+    ],
+    "ui_resource": "ui://nteract/output.html",
+    "server": {
+      "name": "nteract",
+      "repo_url": "https://github.com/nteract/nteract"
+    },
+    "verification": {
+      "status": "source-inspected",
+      "last_checked": "2026-08-11",
+      "evidence": {
+        "resource_path": "crates/runt-mcp/src/resources.rs",
+        "tool_path": "crates/runt-mcp/src/tools/mod.rs"
+      }
+    },
+    "added": "2026-08-11"
+  }
+]

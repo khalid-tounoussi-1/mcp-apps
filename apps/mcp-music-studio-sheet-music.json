@@ -1,0 +1,24 @@
+{
+  "id": "mcp-music-studio-sheet-music",
+  "name": "Sheet Music Viewer",
+  "description": "Render generated music as sheet music and play it back.",
+  "category": "media",
+  "features": [
+    "audio",
+    "canvas"
+  ],
+  "ui_resource": "ui://sheet-music/mcp-app.html",
+  "server": {
+    "name": "mcp-music-studio",
+    "repo_url": "https://github.com/linxule/mcp-music-studio"
+  },
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "worker/src/index.ts",
+      "tool_path": "server.ts"
+    }
+  },
+  "added": "2026-08-11"
+}

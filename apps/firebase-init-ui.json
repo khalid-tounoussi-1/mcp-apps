@@ -1,0 +1,28 @@
+{
+  "id": "firebase-init-ui",
+  "name": "Firebase Init UI",
+  "description": "Set up a Firebase project through a visual form instead of answering CLI prompts.",
+  "category": "forms-workflows",
+  "features": [
+    "interactive-form",
+    "multi-step"
+  ],
+  "ui_resource": "ui://core/init/mcp-app.html",
+  "server": {
+    "name": "firebase-tools",
+    "repo_url": "https://github.com/firebase/firebase-tools",
+    "install": {
+      "npm": "firebase-tools"
+    }
+  },
+  "availability": "behind experiment flag: mcpapps",
+  "verification": {
+    "status": "source-inspected",
+    "last_checked": "2026-08-11",
+    "evidence": {
+      "resource_path": "src/mcp/resources/init_ui.ts",
+      "tool_path": "src/mcp/tools/core/init.ts"
+    }
+  },
+  "added": "2026-08-11"
+}

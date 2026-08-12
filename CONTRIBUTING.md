@@ -1,5 +1,16 @@
 # Contributing
 
+## One entry is one app, not one server
+
+This is the thing to get right. The unit is a `ui://` resource and the tool that
+opens it. A server shipping three UI resources becomes three entries that share a
+`server` block, because someone browsing this list wants a chart or a form, not a
+repository.
+
+So `id` and `name` describe the app (`firebase-init-ui`, "Firebase Init UI"), and the
+repo goes in `server.repo_url`. Two entries may share a `server.repo_url`. What must
+be unique is the pair of repo and `ui_resource`.
+
 ## Adding an app
 
 1. Copy `templates/app.template.json` to `apps/<your-id>.json`. The `id` must match
@@ -9,6 +20,10 @@
 4. Open a pull request.
 
 One file per app, so your pull request will not conflict with anyone else's.
+
+If a UI does not render out of the box, say so in `availability`, for example
+`behind experiment flag: mcpapps`. It shows in the list as ⚑ and saves the next
+person wondering why nothing appeared.
 
 ## Be accurate about verification
 
