@@ -2,6 +2,8 @@
 
 A verified directory of MCP servers that ship an interactive UI.
 
+### → Browse it at **[mcpapps.page](https://mcpapps.page)**
+
 Only servers implementing the
 [MCP Apps extension](https://modelcontextprotocol.io/extensions/apps/overview)
 (SEP-1865). Every entry records how it was checked, and when.
@@ -68,5 +70,8 @@ and the [spec](https://github.com/modelcontextprotocol/ext-apps/blob/main/specif
 ```
 https://raw.githubusercontent.com/khalid-tounoussi-1/mcp-apps/main/apps.json
 ```
+
+[mcpapps.page](https://mcpapps.page) is built from this file, so anything merged
+here appears there on the next deploy.
 
 MIT licensed.
