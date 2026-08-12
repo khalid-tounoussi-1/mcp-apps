@@ -74,4 +74,9 @@ https://raw.githubusercontent.com/khalid-tounoussi-1/mcp-apps/main/apps.json
 [mcpapps.page](https://mcpapps.page) is built from this file, so anything merged
 here appears there on the next deploy.
 
+## Support
+
+Every entry here is checked by hand before it is listed. If that saved you time,
+you can [buy me a coffee](https://buymeacoffee.com/kadoud).
+
 MIT licensed.
