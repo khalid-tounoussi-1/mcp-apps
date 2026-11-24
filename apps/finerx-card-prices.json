@@ -1,0 +1,38 @@
+{
+  "id": "finerx-card-prices",
+  "name": "FineRx Card Prices",
+  "description": "See dated card prices for a medicine at each US pharmacy chain, find nearby pharmacies, and show the free discount card at the counter.",
+  "category": "other",
+  "features": [
+    "also-openai-widget"
+  ],
+  "ui_resource": "ui://finerx/v2/app.html",
+  "tool": "compare_prices",
+  "server": {
+    "name": "finerx-mcp",
+    "repo_url": "https://github.com/andrewfinerx/finerx-mcp",
+    "homepage": "https://www.finerxfinder.com",
+    "author": "FineRx",
+    "license": "MIT",
+    "install": {
+      "pypi": "finerx-mcp",
+      "remote_url": "https://www.finerxfinder.com/mcp"
+    }
+  },
+  "verification": {
+    "status": "probed",
+    "last_checked": "2026-11-24",
+    "checked_by": "andrewfinerx",
+    "evidence": {
+      "mime_type": "text/html;profile=mcp-app",
+      "tool_meta_ui": true,
+      "notes": "Probed 2026-11-24 at https://www.finerxfinder.com/mcp: resources/read serves ui://finerx/v2/app.html as text/html;profile=mcp-app; tools/list has _meta.ui.resourceUri = ui://finerx/v2/app.html on compare_prices, find_nearby_pharmacies and get_savings_card."
+    }
+  },
+  "added": "2026-11-24",
+  "tags": [
+    "pharmacy",
+    "drug-prices",
+    "discount-card"
+  ]
+}

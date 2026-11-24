@@ -8,7 +8,7 @@ Only servers implementing the
 [MCP Apps extension](https://modelcontextprotocol.io/extensions/apps/overview)
 (SEP-1865). Every entry records how it was checked, and when.
 
-**22 apps** across 18 servers. 🔍 22 source-inspected
+**23 apps** across 19 servers. ✅ 1 probed, 🔍 22 source-inspected
 
 ## What qualifies
 
@@ -106,6 +106,12 @@ something enabled before its UI renders, such as a feature flag.
 | --- | --- | --- | :---: | --- |
 | **FutureSearch Session View** | Follow a FutureSearch forecasting session as it runs. | [futuresearch-mcp](https://github.com/futuresearch/futuresearch-python) | 🔍<br><sub>2026-08-11</sub> |  |
 | **nteract Notebook Output** | View rich notebook cell output rendered inline in the conversation. | [nteract](https://github.com/nteract/nteract) | 🔍<br><sub>2026-08-11</sub> |  |
+
+### Other
+
+| App | What it does | Server | Checked | Media |
+| --- | --- | --- | :---: | --- |
+| **FineRx Card Prices** | See dated card prices for a medicine at each US pharmacy chain, find nearby pharmacies, and show the free discount card at the counter. | [finerx-mcp](https://github.com/andrewfinerx/finerx-mcp) | ✅<br><sub>2026-11-24</sub> |  |
 
 
 ## Contributing
